@@ -1,5 +1,5 @@
-modelFileUrl: "https://github.com/api-generation/library/blob/main/library.xml"
-outputDirUrl: "https://github.com/api-generation/library/blob/main/generated/"
+modelFileURI: "https://github.com/api-generation/library/blob/main/library.xml"
+outputDirURI: "https://github.com/api-generation/library/blob/main/generated/"
 modelConfig:
   packageNames:
     typesPackage: "Types Folder"
@@ -15,21 +15,21 @@ modelConfig:
 
 dependencies:
   "Personal Details":
-    modelFileUrl: "https://github.com/api-generation/personal-details/blob/main/generated/mtt-models/personal-details.json"
+    modelFileURI: "https://github.com/api-generation/personal-details/blob/main/generated/mtt-models/personal-details.json"
     version: "1.0.0"
   "Core Types":
-    modelFileUrl: "https://github.com/api-generation/core-types/blob/main/generated/mtt-models/core-types.json"
+    modelFileURI: "https://github.com/api-generation/core-types/blob/main/generated/mtt-models/core-types.json"
     version: "1.0.0"
 loader:
-  loaderUrl: "http://localhost:7010"  
-  configFileUrl: "https://github.com/mghaigh/common-config/blob/main/config/loaders/ea-xmi/config.yaml"
+  loaderURL: "http://localhost:7010"  
+  configFileURI: "https://github.com/mghaigh/common-config/blob/main/config/loaders/ea-xmi/config.yaml"
 generators:
 #  GraphQL:
-  - generatorUrl: "http://localhost:9025"
-    configFileUrl: "https://github.com/mghaigh/common-config/blob/main/config/generators/graphql/config.yaml"
+  - generatorURL: "http://localhost:9025"
+    configFileURI: "https://github.com/mghaigh/common-config/blob/main/config/generators/graphql/config.yaml"
 #  OpenAPI:
-  - generatorUrl: "http://localhost:9010"
-    configFileUrl: "https://github.com/mghaigh/common-config/blob/main/config/generators/openapi/config.yaml"
+  - generatorURL: "http://localhost:9010"
+    configFileURI: "https://github.com/mghaigh/common-config/blob/main/config/generators/openapi/config.yaml"
 #  MkDocs:
-  - generatorUrl: "http://localhost:9020"  
-    configFileUrl: "https://github.com/mghaigh/common-config/blob/main/config/generators/mkdoc/config.yaml"
+  - generatorURL: "http://localhost:9020"  
+    configFileURI: "https://github.com/mghaigh/common-config/blob/main/config/generators/mkdoc/config.yaml"
