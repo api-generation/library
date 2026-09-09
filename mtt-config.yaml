@@ -1,4 +1,4 @@
-modelFilePath: "library/library.xml"
+modelFilePath: "api-generation/library/library.xml"
 modelConfig:
   packageNames:
     typesPackage: "library"
@@ -13,36 +13,36 @@ modelConfig:
       immutable: false
 dependencies:
   "Personal Details":
-    modelFilePath: "personal-details/${MTT_MODEL_FILE}"
+    modelFilePath: "api-generation/personal-details/${MTT_MODEL_FILE}"
     version: "1.0.0"
   "Core Types":
-    modelFilePath: "core-types/${MTT_MODEL_FILE}"
+    modelFilePath: "api-generation/core-types/${MTT_MODEL_FILE}"
     version: "1.0.0"
 loader:
   loaderURL: "http://localhost:7010"
-  configFilePath: "common-config/config/loaders/ea-xmi/config.yaml"
+  configFilePath: api-generation/"common-config/config/loaders/ea-xmi/config.yaml"
 generators:
   #  AOCO:
   - generatorURL: "http://localhost:9015"
-    configFilePath: "common-config/config/generators/aoco/config.yaml"
+    configFilePath: "api-generation/common-config/config/generators/aoco/config.yaml"
   # "Elastic Mapper":
   - generatorURL: "http://localhost:9005"
-    configFilePath: "common-config/config/generators/elastic-mapper/config.yaml"
+    configFilePath: "api-generation/common-config/config/generators/elastic-mapper/config.yaml"
   #  GraphQL:
   - generatorURL: "http://localhost:9025"
-    configFilePath: "common-config/config/generators/graphql/config.yaml"
+    configFilePath: "api-generation/common-config/config/generators/graphql/config.yaml"
   #  MkDocs:
   - generatorURL: "http://localhost:9020"
-    configFilePath: "common-config/config/generators/mkdoc/config.yaml"
+    configFilePath: "api-generation/common-config/config/generators/mkdoc/config.yaml"
   #  OpenAPI:
   - generatorURL: "http://localhost:9010"
-    configFilePath: "common-config/config/generators/openapi/config.yaml"
+    configFilePath: "api-generation/common-config/config/generators/openapi/config.yaml"
   #  ProtoBuf:
   - generatorURL: "http://localhost:9045"
-    configFilePath: "common-config/config/generators/protobuf/config.yaml"
+    configFilePath: "api-generation/common-config/config/generators/protobuf/config.yaml"
   #  Canonical:
   - generatorURL: "http://localhost:9050"
-    configFilePath: "common-config/config/generators/canonical/config.yaml"
+    configFilePath: "api-generation/common-config/config/generators/canonical/config.yaml"
 
     #  oml:
   #    generatorURL: "http://localhost:9030"
