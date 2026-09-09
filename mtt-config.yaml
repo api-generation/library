@@ -1,9 +1,8 @@
-modelFileURI: "https://github.com/api-generation/library/blob/main/library.xml"
-outputDirURI: "https://github.com/api-generation/library/blob/main/generated/"
+modelFilePath: "library/library.xml"
 modelConfig:
   packageNames:
-    typesPackage: "Types Folder"
-    queriesPackage: "Interfaces"
+    typesPackage: "library"
+    queriesPackage: "interfaces"
   defaults:
     classDefaults:
       classActions:
@@ -12,24 +11,47 @@ modelConfig:
       highInstanceCount: false
       implementNode: true
       immutable: false
-
 dependencies:
   "Personal Details":
-    modelFileURI: "https://github.com/api-generation/personal-details/blob/main/generated/mtt-models/personal-details.json"
+    modelFilePath: "personal-details/${MTT_MODEL_FILE}"
     version: "1.0.0"
   "Core Types":
-    modelFileURI: "https://github.com/api-generation/core-types/blob/main/generated/mtt-models/core-types.json"
+    modelFilePath: "core-types/${MTT_MODEL_FILE}"
     version: "1.0.0"
 loader:
-  loaderURL: "http://localhost:7010"  
-  configFileURI: "https://github.com/mghaigh/common-config/blob/main/config/loaders/ea-xmi/config.yaml"
+  loaderURL: "http://localhost:7010"
+  configFilePath: "common-config/config/loaders/ea-xmi/config.yaml"
 generators:
-#  GraphQL:
+  #  AOCO:
+  - generatorURL: "http://localhost:9015"
+    configFilePath: "common-config/config/generators/aoco/config.yaml"
+  # "Elastic Mapper":
+  - generatorURL: "http://localhost:9005"
+    configFilePath: "common-config/config/generators/elastic-mapper/config.yaml"
+  #  GraphQL:
   - generatorURL: "http://localhost:9025"
-    configFileURI: "https://github.com/mghaigh/common-config/blob/main/config/generators/graphql/config.yaml"
-#  OpenAPI:
+    configFilePath: "common-config/config/generators/graphql/config.yaml"
+  #  MkDocs:
+  - generatorURL: "http://localhost:9020"
+    configFilePath: "common-config/config/generators/mkdoc/config.yaml"
+  #  OpenAPI:
   - generatorURL: "http://localhost:9010"
-    configFileURI: "https://github.com/mghaigh/common-config/blob/main/config/generators/openapi/config.yaml"
-#  MkDocs:
-  - generatorURL: "http://localhost:9020"  
-    configFileURI: "https://github.com/mghaigh/common-config/blob/main/config/generators/mkdoc/config.yaml"
+    configFilePath: "common-config/config/generators/openapi/config.yaml"
+  #  ProtoBuf:
+  - generatorURL: "http://localhost:9045"
+    configFilePath: "common-config/config/generators/protobuf/config.yaml"
+  #  Canonical:
+  - generatorURL: "http://localhost:9050"
+    configFilePath: "common-config/config/generators/canonical/config.yaml"
+
+    #  oml:
+  #    generatorURL: "http://localhost:9030"
+  #    configFilePath: "common-config/config/generators/oml/config.yaml"
+  #  telematics:
+  #    generatorURL: "http://localhost:9040"
+  #    configFilePath: "common-config/config/generators/telematics/config.yaml"
+  #  Reversed:
+  - generatorURL: "http://localhost:9035"
+    configFilePath: "common-config/config/generators/reversed/config.yaml"
+
+# network location format "nuc/sambashare/models/library/config/generators/aoco/aoco.yaml"
